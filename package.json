@@ -1,9 +1,10 @@
 {
   "name": "@hexlet/code.",
   "bin": {
-    "gendiff": "gendiff.js"
+    "gendiff": "bin/gendiff.js"
   },
   "version": "1.0.0",
+  "type": "module",
   "description": "My second frontend project. The project covers architectural solutions, automated testing and continuous integration, functional programming.",
   "main": "index.js",
   "scripts": {
@@ -23,6 +24,9 @@
     "commander": "^12.0.0"
   },
   "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1",
     "make": "^0.8.1"
   }
 }
