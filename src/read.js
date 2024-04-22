@@ -8,6 +8,6 @@ const readFile = (file) => {
   const path = getPathFile(file);
   const data = readFileSync(path, 'utf-8');
   return JSON.parse(data);
-}
+};
 
 export default readFile;
