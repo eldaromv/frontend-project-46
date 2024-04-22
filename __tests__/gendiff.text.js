@@ -1,6 +1,6 @@
 import { expect, test } from '@jest/globals';
-import gendiff from '../src/index.js';
 import _ from 'lodash';
+import gendiff from '../src/index.js';
 
 test('compare json files', () => {
   const lines = [
@@ -10,7 +10,7 @@ test('compare json files', () => {
     '  - proxy: 123.234.53.22',
     '  - follow: false',
     '  + verbose: true',
-];
+  ];
 
   const path1 = '__fixtures__/file1.json';
   const path2 = '__fixtures__/file2.json';
