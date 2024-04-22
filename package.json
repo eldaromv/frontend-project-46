@@ -8,7 +8,7 @@
   "description": "My second frontend project. The project covers architectural solutions, automated testing and continuous integration, functional programming.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,7 @@
     "eslint": "^8.57.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.29.1",
+    "jest": "^29.7.0",
     "make": "^0.8.1"
   }
 }

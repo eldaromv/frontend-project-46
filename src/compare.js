@@ -10,19 +10,20 @@ const compareObject = (data1, data2, depth = 2) => {
 
   const indentSize = depth * spacesCount;
   const currentIndent = replacer.repeat(indentSize);
-  const bracketIndent = replacer.repeat(indentSize - spacesCount);
 
   const lines = keys.map((key) => {
     if (!_.has(data1, key)) {
       return `${currentIndent}+ ${key}: ${data2[key]}`;
-    } if (!_.has(data2, key)) {
+    }
+    if (!_.has(data2, key)) {
       return `${currentIndent}- ${key}: ${data1[key]}`;
-    } if (data1[key] === data2[key]) {
+    }
+    if (data1[key] === data2[key]) {
       return `${currentIndent}  ${key}: ${data1[key]}`;
     }
     return `${currentIndent}- ${key}: ${data1[key]}\n${currentIndent}+ ${key}: ${data2[key]}`;
   });
-  return ['{', ...lines, `${bracketIndent}}`].join('\n');
+  return ['{', ...lines, '}'].join('\n');
 };
 
 export default compareObject;
