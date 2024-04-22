@@ -8,7 +8,8 @@
   "description": "My second frontend project. The project covers architectural solutions, automated testing and continuous integration, functional programming.",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint"
   },
   "repository": {
     "type": "git",
