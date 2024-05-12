@@ -6,7 +6,7 @@
   "version": "1.0.0",
   "type": "module",
   "description": "My second frontend project. The project covers architectural solutions, automated testing and continuous integration, functional programming.",
-  "main": "gendiff.js",
+  "main": "bin/gendiff.js",
   "scripts": {
     "test": "jest",
     "lint": "eslint"
