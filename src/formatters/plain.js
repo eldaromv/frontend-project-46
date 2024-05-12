@@ -10,25 +10,23 @@ const addChild = (child) => {
 
 const plain = (array, accum = '') => {
   const keys = Object.keys(array);
-  const result = keys.map((key) => {
+  const lines = [];
+
+  keys.forEach((key) => {
     const obj = array[key];
 
     if (obj.type === 'parent') {
-      return plain(obj.children, `${accum}${obj.key}.`);
+      lines.push(plain(obj.children, `${accum}${obj.key}.`));
+    } else if (obj.type === 'deleted') {
+      lines.push(`Property '${accum + obj.key}' was removed`);
+    } else if (obj.type === 'added') {
+      lines.push(`Property '${accum + obj.key}' was added with value: ${addChild(obj.children)}`);
+    } else if (obj.type === 'diffValue') {
+      lines.push(`Property '${accum + obj.key}' was updated. From ${addChild(obj.children)} to ${addChild(obj.children2)}`);
     }
-    if (obj.type === 'deleted') {
-      return `Property '${accum + obj.key}' was removed`;
-    }
-    if (obj.type === 'added') {
-      return `Property '${accum + obj.key}' was added with value: ${addChild(obj.children)}`;
-    }
-    if (obj.type === 'diffValue') {
-      return `Property '${accum + obj.key}' was updated. From ${addChild(obj.children)} to ${addChild(obj.children2)}`;
-    }
-    return null;
   });
 
-  return result.filter((line) => line !== null).join('\n');
+  return lines.join('\n');
 };
 
 export default plain;
