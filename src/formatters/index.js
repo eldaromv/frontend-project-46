@@ -1,7 +1,7 @@
-import generateDiffTree from './stylish.js';
+import generateDiffTree from './diffTree.js';
 import plain from './plain.js';
 
-const getFormat = (data, format = 'stylish') => {
+const getFormat = (data, format) => {
   switch (format) {
     case 'stylish':
       return generateDiffTree(data, 0);
