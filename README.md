@@ -6,8 +6,6 @@
 <a href="https://codeclimate.com/github/eldaromv/frontend-project-46/test_coverage"><img src="https://api.codeclimate.com/v1/badges/879c0e8c42cdd02299c2/test_coverage" /></a>
 
 # Вычислитель отличий
-
-# Описание проекта:
 «Вычислитель отличий» — это программа, которая сравнивает два файла JSON или YAML и показывает разницу. Вывод может быть в видео stylish, plain, json.
 + «+» означает, что элемент добавлен,
 + «-» означает, что элемент был удален,
