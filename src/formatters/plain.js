@@ -1,5 +1,7 @@
+import _ from 'lodash';
+
 const addChild = (child) => {
-  if (typeof child === 'object' && child !== null && !Array.isArray(child)) {
+  if (_.isPlainObject(child)) {
     return '[complex value]';
   }
   if (typeof child === 'string') {

@@ -1,17 +1,18 @@
-import generateDiffTree from './diffTree.js';
 import plain from './plain.js';
+import makeStylish from './stylish.js'; 
 
-const getFormat = (data, format) => {
+const getFormat = (data, format, option = undefined) => {
   switch (format) {
     case 'stylish':
-      return generateDiffTree(data, 0);
+      return makeStylish(data, option);
     case 'json':
-      return JSON.stringify(data);
+      return JSON.stringify(data, null, option);
     case 'plain':
-      return plain(data);
+      return plain(data, option);
     default:
       throw new Error(`${format} is not supported`);
   }
 };
 
 export default getFormat;
+
