@@ -1,5 +1,5 @@
 import plain from './plain.js';
-import makeStylish from './stylish.js'; 
+import makeStylish from './stylish.js';
 
 const getFormat = (data, format, option = undefined) => {
   switch (format) {
@@ -15,4 +15,3 @@ const getFormat = (data, format, option = undefined) => {
 };
 
 export default getFormat;
-
