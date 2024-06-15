@@ -105,8 +105,8 @@ const compareData = (obj1, obj2) => {
     return {
       type: 'diffValue',
       key,
-      value1: value1,
-      value2: value2,
+      value1,
+      value2,
     };
   });
 };
